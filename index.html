@@ -14,6 +14,7 @@
   <link rel="stylesheet" href="css/style.min.css">
   <script defer src="js/main.min.js"></script>
 </head>
+
 <body class="body">
     <main class="main">
         <section class="start">
@@ -59,8 +60,10 @@
                         </label>
                         <div class="start__label">
                             <div class="start__block-date">
-                                <input class="start__date" type="date" name="start-date">
-                                <input class="start__date" type="date" name="final-date">
+                                <input class="start__date" type="date" name="start-date" min="2020-12-31"
+                                    max="2099-12-31">
+                                <input class="start__date" type="date" name="final-date" min="2020-12-31"
+                                    max="2099-12-31">
                             </div>
                             <span class="start__span">укажите диапазон</span>
                         </div>
@@ -97,8 +100,8 @@
                                     <img class="about__img" src="images/about-video.png" alt="Дом в горах">
                                 </picture>
                             </div>
-                            <button class="about__video-btn" data-fancybox data-src="https://www.youtube.com/watch?v=WujKJpxaUHk"
-                                aria-label="Смотреть видео">
+                            <button class="about__video-btn" data-fancybox
+                                data-src="https://www.youtube.com/watch?v=WujKJpxaUHk" aria-label="Смотреть видео">
                                 <svg class="about__video-play">
                                     <use xlink:href="images/sprite.svg#video-play"></use>
                                 </svg>
@@ -419,8 +422,8 @@
                                 <source srcset="images/gallery.webp" type="image/webp">
                                 <img class="gallery__img" src="images/gallery.png" alt="Фотосессия в горах">
                             </picture>
-                            <button class="gallery__pic-overlay" data-fancybox="gallery"
-                                data-src="images/gallery.png" aria-label="Смотреть фото"></button>
+                            <button class="gallery__pic-overlay" data-fancybox="gallery" data-src="images/gallery.png"
+                                aria-label="Смотреть фото"></button>
                         </div>
                         <div class="gallery__pic swiper-slide">
                             <picture>
@@ -428,8 +431,8 @@
                                 <source srcset="images/gallery2.webp" type="image/webp">
                                 <img class="gallery__img" src="images/gallery2.png" alt="Карта">
                             </picture>
-                            <button class="gallery__pic-overlay" data-fancybox="gallery"
-                                data-src="images/gallery2.png" aria-label="Смотреть фото"></button>
+                            <button class="gallery__pic-overlay" data-fancybox="gallery" data-src="images/gallery2.png"
+                                aria-label="Смотреть фото"></button>
                         </div>
                         <div class="gallery__pic swiper-slide">
                             <picture>
@@ -437,8 +440,8 @@
                                 <source srcset="images/gallery3.webp" type="image/webp">
                                 <img class="gallery__img" src="images/gallery3.png" alt="Дубай">
                             </picture>
-                            <button class="gallery__pic-overlay" data-fancybox="gallery"
-                                data-src="images/gallery3.png" aria-label="Смотреть фото"></button>
+                            <button class="gallery__pic-overlay" data-fancybox="gallery" data-src="images/gallery3.png"
+                                aria-label="Смотреть фото"></button>
                         </div>
                         <div class="gallery__pic swiper-slide">
                             <picture>
@@ -446,8 +449,8 @@
                                 <source srcset="images/gallery4.webp" type="image/webp">
                                 <img class="gallery__img" src="images/gallery4.png" alt="Пляж с высоты">
                             </picture>
-                            <button class="gallery__pic-overlay" data-fancybox="gallery"
-                                data-src="images/gallery4.png" aria-label="Смотреть фото"></button>
+                            <button class="gallery__pic-overlay" data-fancybox="gallery" data-src="images/gallery4.png"
+                                aria-label="Смотреть фото"></button>
                         </div>
                         <div class="gallery__pic swiper-slide">
                             <picture>
@@ -455,8 +458,8 @@
                                 <source srcset="images/gallery5.webp" type="image/webp">
                                 <img class="gallery__img" src="images/gallery5.png" alt="Горы">
                             </picture>
-                            <button class="gallery__pic-overlay" data-fancybox="gallery"
-                                data-src="images/gallery5.png" aria-label="Смотреть фото"></button>
+                            <button class="gallery__pic-overlay" data-fancybox="gallery" data-src="images/gallery5.png"
+                                aria-label="Смотреть фото"></button>
                         </div>
                         <div class="gallery__pic swiper-slide">
                             <picture>
@@ -464,12 +467,35 @@
                                 <source srcset="images/gallery6.webp" type="image/webp">
                                 <img class="gallery__img" src="images/gallery6.png" alt="Карта">
                             </picture>
-                            <button class="gallery__pic-overlay" data-fancybox="gallery"
-                                data-src="images/gallery6.png" aria-label="Смотреть фото"></button>
+                            <button class="gallery__pic-overlay" data-fancybox="gallery" data-src="images/gallery6.png"
+                                aria-label="Смотреть фото"></button>
                         </div>
                     </div>
                 </div>
                 <a class="gallery__btn btn" href="#">Наш pinterest</a>
+            </div>
+        </section>
+        <section class="newsletter">
+            <div class="container">
+                <div class="newsletter__wrapper">
+                    <div class="newsletter__content">
+                        <p class="newsletter__subtitle subtitle">актуально</p>
+                        <h2 class="newsletter__title title">Получайте полезные рассылки о путешествиях</h2>
+                    </div>
+                    <div class="newsletter__subscribe">
+                        <p class="newsletter__text">Введите e-mail адрес</p>
+                        <form class="newsletter__form" action="">
+                            <label class="newsletter__label">
+                                <input class="newsletter__input" type="email" inputmode="email" name="email"
+                                    placeholder="name@domain.com" required="required">
+                            </label>
+                            <button class="newsletter__button btn" type="submit">Подписаться на новости</button>
+                        </form>
+                        <p class="newsletter__terms">подписываясь на новости, вы автоматически соглашаетесь с <a
+                                class="newsletter__terms-link" href="#">условиями обработки персональных данных</a> и <a
+                                class="newsletter__terms-link" href="#">правилами рекламных рассылок</a></p>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
@@ -489,24 +515,28 @@
                         </div>
                         <ul class="footer__socials">
                             <li class="footer__socials-item">
-                                <a class="footer__social-link" href="#" aria-label="Перейти в наш Telegram"><svg class="footer__social">
-                                    <use xlink:href="images/sprite.svg#tg"></use>
-                                </svg></a>
+                                <a class="footer__social-link" href="#" aria-label="Перейти в наш Telegram"><svg
+                                        class="footer__social">
+                                        <use xlink:href="images/sprite.svg#tg"></use>
+                                    </svg></a>
                             </li>
                             <li class="footer__socials-item">
-                                <a class="footer__social-link" href="#" aria-label="Перейти в наш ВКонтакте"><svg class="footer__social">
-                                    <use xlink:href="images/sprite.svg#vk"></use>
-                                </svg></a>
+                                <a class="footer__social-link" href="#" aria-label="Перейти в наш ВКонтакте"><svg
+                                        class="footer__social">
+                                        <use xlink:href="images/sprite.svg#vk"></use>
+                                    </svg></a>
                             </li>
                             <li class="footer__socials-item">
-                                <a class="footer__social-link" href="#" aria-label="Перейти в наш Pinterest"><svg class="footer__social">
-                                    <use xlink:href="images/sprite.svg#pint"></use>
-                                </svg></a>
+                                <a class="footer__social-link" href="#" aria-label="Перейти в наш Pinterest"><svg
+                                        class="footer__social">
+                                        <use xlink:href="images/sprite.svg#pint"></use>
+                                    </svg></a>
                             </li>
                             <li class="footer__socials-item">
-                                <a class="footer__social-link" href="#" aria-label="Перейти в наш Скайп"> <svg class="footer__social">
-                                    <use xlink:href="images/sprite.svg#sk"></use>
-                                </svg></a>
+                                <a class="footer__social-link" href="#" aria-label="Перейти в наш Скайп"> <svg
+                                        class="footer__social">
+                                        <use xlink:href="images/sprite.svg#sk"></use>
+                                    </svg></a>
                             </li>
                         </ul>
                     </div>
@@ -515,40 +545,52 @@
                         <h3 class="footer__title">Наши услуги</h3>
                         <ul class="footer__list">
                             <li class="footer__list-item">
-                                <svg class="footer__arrow">
-                                    <use xlink:href="images/sprite.svg#arrow"></use>
-                                </svg>
-                                <a class="footer__link" href="#">Прогулки в горы летом</a>
+                                <a class="footer__link" href="#">
+                                    <svg class="footer__arrow">
+                                        <use xlink:href="images/sprite.svg#arrow"></use>
+                                    </svg>
+                                    <span>Прогулки в горы летом</span>
+                                </a>
                             </li>
                             <li class="footer__list-item">
-                                <svg class="footer__arrow">
-                                    <use xlink:href="images/sprite.svg#arrow"></use>
-                                </svg>
-                                <a class="footer__link" href="#">Зимние походы в горы</a>
+                                <a class="footer__link" href="#">
+                                    <svg class="footer__arrow">
+                                        <use xlink:href="images/sprite.svg#arrow"></use>
+                                    </svg>
+                                    <span class="">Зимние походы в горы</span>
+                                </a>
                             </li>
                             <li class="footer__list-item">
-                                <svg class="footer__arrow">
-                                    <use xlink:href="images/sprite.svg#arrow"></use>
-                                </svg>
-                                <a class="footer__link" href="#">Посещение храмов в горах</a>
+                                <a class="footer__link" href="#">
+                                    <svg class="footer__arrow">
+                                        <use xlink:href="images/sprite.svg#arrow"></use>
+                                    </svg>
+                                    <span class="">Посещение храмов в горах</span>
+                                </a>
                             </li>
                             <li class="footer__list-item">
-                                <svg class="footer__arrow">
-                                    <use xlink:href="images/sprite.svg#arrow"></use>
-                                </svg>
-                                <a class="footer__link" href="#">Экстремальные виды туризма</a>
+                                <a class="footer__link" href="#">
+                                    <svg class="footer__arrow">
+                                        <use xlink:href="images/sprite.svg#arrow"></use>
+                                    </svg>
+                                    <span class="">Экстремальные виды туризма</span>
+                                </a>
                             </li>
                             <li class="footer__list-item">
-                                <svg class="footer__arrow">
-                                    <use xlink:href="images/sprite.svg#arrow"></use>
-                                </svg>
-                                <a class="footer__link" href="#">Походы в джунглях Амазонии</a>
+                                <a class="footer__link footer__link--new" href="#">
+                                    <svg class="footer__arrow">
+                                        <use xlink:href="images/sprite.svg#arrow"></use>
+                                    </svg>
+                                    <span>Походы в джунглях Амазонии</span>
+                                </a>
                             </li>
                             <li class="footer__list-item">
-                                <svg class="footer__arrow">
-                                    <use xlink:href="images/sprite.svg#arrow"></use>
-                                </svg>
-                                <a class="footer__link" href="#">Поездка в Африку</a>
+                                <a class="footer__link" href="#">
+                                    <svg class="footer__arrow">
+                                        <use xlink:href="images/sprite.svg#arrow"></use>
+                                    </svg>
+                                    <span class="">Поездка в Африку</span>
+                                </a>
                             </li>
                         </ul>
                     </div>
@@ -556,28 +598,36 @@
                         <h3 class="footer__title">Важно для путешествий</h3>
                         <ul class="footer__list">
                             <li class="footer__list-item">
-                                <svg class="footer__arrow">
-                                    <use xlink:href="images/sprite.svg#arrow"></use>
-                                </svg>
-                                <a class="footer__link" href="#">Как собрать в долгий поход?</a>
+                                <a class="footer__link" href="#">
+                                    <svg class="footer__arrow">
+                                        <use xlink:href="images/sprite.svg#arrow"></use>
+                                    </svg>
+                                    <span class="">Как собрать в долгий поход?</span>
+                                </a>
                             </li>
                             <li class="footer__list-item">
-                                <svg class="footer__arrow">
-                                    <use xlink:href="images/sprite.svg#arrow"></use>
-                                </svg>
-                                <a class="footer__link" href="#">Жизненно важные предметы для похода</a>
+                                <a class="footer__link footer__link--new" href="#">
+                                    <svg class="footer__arrow">
+                                        <use xlink:href="images/sprite.svg#arrow"></use>
+                                    </svg>
+                                    <span class="">Жизненно важные предметы для похода</span>
+                                </a>
                             </li>
                             <li class="footer__list-item">
-                                <svg class="footer__arrow">
-                                    <use xlink:href="images/sprite.svg#arrow"></use>
-                                </svg>
-                                <a class="footer__link" href="#">Медицинская страховка, гарантии безопасности</a>
+                                <a class="footer__link" href="#">
+                                    <svg class="footer__arrow">
+                                        <use xlink:href="images/sprite.svg#arrow"></use>
+                                    </svg>
+                                    <span class="">Медицинская страховка, гарантии безопасности</span>
+                                </a>
                             </li>
                             <li class="footer__list-item">
-                                <svg class="footer__arrow">
-                                    <use xlink:href="images/sprite.svg#arrow"></use>
-                                </svg>
-                                <a class="footer__link" href="#">Если вы врач — загляните сюда</a>
+                                <a class="footer__link" href="#">
+                                    <svg class="footer__arrow">
+                                        <use xlink:href="images/sprite.svg#arrow"></use>
+                                    </svg>
+                                    <span class="">Если вы врач — загляните сюда</span>
+                                </a>
                             </li>
                         </ul>
                     </div>
